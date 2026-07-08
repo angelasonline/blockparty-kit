@@ -1,14 +1,9 @@
 # 🎈 The Block Party Kit
 
-**Turn a room full of ordinary laptops into a shared AI your community runs.**
-
-Not a metaphor. Three friends' laptops on the same Wi-Fi, three commands,
-and you have a shared model — served from the room, owned by the people in
-it, with an agent on top that anyone can talk to. No cloud account. No
-subscription. No company that can turn it off.
+**Turn a room full of ordinary laptops into a shared AI that your community runs.**
 
 We call the first gathering a **block party**, because that's what it is:
-you bring a laptop instead of a casserole.
+you bring a laptop instead of a a dish to pash.
 
 ---
 
@@ -18,25 +13,25 @@ Every conversation about AI assumes one of two owners: *you* (one laptop,
 one small model) or *a corporation* (their datacenter, your subscription).
 
 There's a third owner nobody talks about: **a group of people.** A street.
-A school. A library. A church basement. A co-op.
+A school. A library. A place of worship. A co-op.
 
 The pieces to make that real shipped in the open:
 
 - [**Mesh LLM**](https://github.com/Mesh-LLM/mesh-llm) pools GPUs and memory
   across machines and exposes the result as one OpenAI-compatible API. Models
   too large for any single box get split into layer stages across peers.
-- [**goose**](https://github.com/block/goose) — the open-source agent
+- [**goose**](https://github.com/block/goose) the open-source agent
   started at Block, now governed by the Agentic AI Foundation at the Linux
-  Foundation — sits on top as the thing you actually *talk to*, and Mesh
+  Foundation sits on top as the thing you actually *talk to*, and Mesh
   ships a one-command launcher for it.
 - Spiral's new [**Goose Development Kit (GDK)**](https://spiral.xyz/goose/)
-  means anyone can embed that agent into their own apps — kiosks, tools,
+  means anyone can embed that agent into their own apps kiosks, tools,
   whatever your community needs next.
 
 This kit is the missing social layer: the instructions, scripts, and
 invitation to actually do it **together**.
 
-It's a potluck for computers: everyone brings what they have, and together the table holds something nobody could have made alone.
+It's a #blockparty for computers: everyone brings what they have, and together the table holds something nobody could have made alone.
 
 ---
 
@@ -45,13 +40,13 @@ It's a potluck for computers: everyone brings what they have, and together the t
 - **3+ computers** on the same network (2 works; more is better).
   macOS or Linux, ideally with 8GB+ RAM each. GPUs help but aren't required.
 - **One evening.**
-- **Snacks.** Non-negotiable. It's a party.
+- **Tasty eats.** Non-negotiable. It's a party, b.
 
 ---
 
 ## The party, step by step
 
-### 1. The host machine — start the mesh
+### 1. The host machine starts the mesh
 
 On the most capable machine in the room:
 
@@ -62,13 +57,13 @@ mesh-llm serve --model Qwen3-8B-Q4_K_M --mesh-name "block-party"
 
 This installs Mesh (checksum-verified release binaries), downloads the model,
 starts a **private** mesh, and prints an **invite token**. Write the token on
-a whiteboard. That token *is* the key to your village — only machines that
+a whiteboard. That token *is* the key to your village only machines that
 have it can join.
 
 (Or run `./scripts/host.sh`, which does the above with guardrails and
 friendlier output.)
 
-### 2. Everyone else — join it
+### 2. Everyone else joins it
 
 On each additional machine:
 
@@ -83,7 +78,7 @@ Each machine that joins adds its memory and compute to the pool. Open the
 web console at `http://localhost:3131` on any node and watch the room's
 machines find each other. This is the moment. Take the photo.
 
-### 3. Meet your librarian — put goose on top
+### 3. Meet your librarian by putting goose on top
 
 On any machine in the mesh:
 
@@ -140,18 +135,18 @@ the install script runs clean with checksums verified; the `mesh-llm` CLI,
 its Linux Foundation home. Every command above is taken verbatim from, or
 tested against, the upstream projects.
 
-**Not yet verified by us:** a full multi-machine party. On purpose — it
+**Not yet verified by us:** a full multi-machine party. On purpose because it
 *can't* be done by one person, and that's the point of the project. Which
 brings us to:
 
-## 🎈 Hold the first block party
+## 🎈 Host the first block party
 
 Nobody has done this yet as a *community* act. Be first. Grab 2+ friends
 and their laptops, follow the steps, and open an issue titled
 **"Party report: <your town>"** with what worked, what broke, and (if you
 want) a photo of the room. `FIRST_PARTY.md` has a checklist.
 
-We'll keep a map. First pin wins bragging rights forever.
+We'll keep a map. First pin wins bragging rights for eternity.
 
 ## Troubleshooting
 
@@ -171,3 +166,4 @@ We're not affiliated with Block, Spiral, or the AAIF — we just think they
 built the parts of something bigger than any of them has said out loud.
 
 License: Apache-2.0. Fork it, translate it, throw a better party than ours.
+Be safe out there.
