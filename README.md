@@ -159,8 +159,9 @@ This is an **unofficial community kit**. It stands on:
 [Mesh LLM](https://github.com/Mesh-LLM/mesh-llm) (Apache-2.0),
 [goose](https://github.com/block/goose) (Apache-2.0, Agentic AI Foundation /
 Linux Foundation), and the [GDK](https://spiral.xyz/goose/) work from Spiral.
-We're not affiliated with Block, Spiral, or the AAIF. We just think they
-built the parts of something bigger than any of them has said out loud.
+We're not affiliated with Block, Spiral, or the AAIF. We just think they're
+21 neat nerds plus one intern who's been missing since they asked him to investigate 
+the secret in the well.
 
 License: Apache-2.0. Fork it, translate it, throw a better party than ours.
 Be safe out there.
