@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>#BlockPartyKit · bring your laptop instead of a dish to pass</title>
+<meta name="description" content="A block party where the neighborhood plugs its laptops together and walks away running a shared AI. Built on Mesh LLM and goose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#160A33;
+  --night-2:#1F1145;
+  --card:#241454;
+  --text:#F4EFFF;
+  --dim:#B9A9E6;
+  --pink:#FF5EDB;
+  --cyan:#4DF0FF;
+  --violet:#A78BFA;
+  --lemon:#FFE45E;
+  --mint:#6FFFC2;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --disp:'Shrikhand',Georgia,serif;
+  --body:'Public Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--night);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.65;
+  background-image:
+    radial-gradient(circle at 15% 12%, rgba(255,94,219,.16), transparent 42%),
+    radial-gradient(circle at 85% 22%, rgba(77,240,255,.14), transparent 40%),
+    radial-gradient(circle at 50% 95%, rgba(167,139,250,.16), transparent 45%);}
+a{color:var(--cyan)}
+.flyer{max-width:760px;margin:56px auto 70px;padding:0 20px}
+.poster{background:var(--night-2);border-radius:18px;padding:58px 44px 42px;position:relative;
+  border:1px solid rgba(167,139,250,.35);
+  box-shadow:0 0 0 1px rgba(255,94,219,.12), 0 0 60px rgba(255,94,219,.14), 0 0 100px rgba(77,240,255,.08);}
+/* twinkles */
+.tw{position:absolute;color:var(--lemon);opacity:.85;font-size:14px;animation:tw 2.6s ease-in-out infinite}
+.tw:nth-child(2){animation-delay:.9s;color:var(--cyan)}
+.tw:nth-child(3){animation-delay:1.7s;color:var(--pink)}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.tw{animation:none}}
+/* guest list garland */
+.garland{text-align:center;font-size:26px;letter-spacing:14px;margin-bottom:6px}
+.when{font-family:var(--mono);font-size:13px;letter-spacing:.22em;color:var(--mint);text-align:center}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(38px,8.4vw,70px);line-height:1.05;text-align:center;margin:10px 0 6px;
+  background:linear-gradient(100deg,var(--pink) 5%,var(--violet) 45%,var(--cyan) 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 18px rgba(255,94,219,.45));}
+.byo{font-weight:700;text-align:center;font-size:clamp(19px,3vw,24px);margin-top:14px;color:var(--lemon)}
+
+.rule{border:none;height:2px;margin:36px auto 28px;max-width:300px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--pink),var(--cyan),transparent)}
+h2{font-family:var(--disp);font-weight:400;font-size:25px;margin:26px 0 16px;color:var(--pink);text-shadow:0 0 16px rgba(255,94,219,.5)}
+
+/* host / join / use */
+.hju{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hj{border-radius:14px;padding:20px 18px;background:var(--card);border:1px solid transparent}
+.hj:nth-child(1){border-color:rgba(77,240,255,.5);box-shadow:0 0 20px rgba(77,240,255,.15)}
+.hj:nth-child(2){border-color:rgba(111,255,194,.5);box-shadow:0 0 20px rgba(111,255,194,.13)}
+.hj:nth-child(3){border-color:rgba(255,94,219,.5);box-shadow:0 0 20px rgba(255,94,219,.15)}
+.hj h3{font-family:var(--disp);font-weight:400;font-size:20px;margin-bottom:8px}
+.hj:nth-child(1) h3{color:var(--cyan)}
+.hj:nth-child(2) h3{color:var(--mint)}
+.hj:nth-child(3) h3{color:var(--pink)}
+.hj p{font-size:15px;margin-bottom:12px;line-height:1.55;color:var(--text)}
+.hj code{display:block;font-family:var(--mono);font-size:11.5px;background:rgba(0,0,0,.35);border-radius:6px;padding:7px 9px;word-break:break-all;color:var(--dim)}
+
+/* built on */
+.built{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.bcard{background:var(--card);border:1px solid rgba(167,139,250,.4);border-radius:14px;padding:20px}
+.bcard h3{font-family:var(--mono);font-size:15px;margin-bottom:8px}
+.bcard h3 a{color:var(--lemon)}
+.bcard p{font-size:14.5px;margin:0;color:var(--dim)}
+.built-note{text-align:center;font-weight:600;max-width:460px;margin:16px auto 0;font-size:clamp(16px,2.4vw,19px)}
+.built-note .kick{display:block;background:linear-gradient(90deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+.cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:34px 0 8px}
+.btn{font-family:var(--mono);font-size:14px;font-weight:500;text-decoration:none;padding:15px 24px;border-radius:999px;color:var(--night)}
+.btn.main{background:linear-gradient(90deg,var(--pink),var(--violet));color:#FFF;box-shadow:0 0 24px rgba(255,94,219,.4)}
+.btn.alt{background:linear-gradient(90deg,var(--cyan),var(--mint));box-shadow:0 0 24px rgba(77,240,255,.3)}
+.btn:hover{transform:translateY(-2px)}
+.fine{font-size:13px;color:var(--dim);text-align:center;margin-top:30px;line-height:1.7}
+.fine a{color:var(--dim)}
+@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+@media(max-width:640px){.poster{padding:48px 22px 32px}.hju,.built{grid-template-columns:1fr}.garland{letter-spacing:8px}}
+</style>
+</head>
+<body>
+<main class="flyer">
+  <div class="poster">
+    <span class="tw" style="top:26px;left:30px">✦</span>
+    <span class="tw" style="top:70px;right:44px">✦</span>
+    <span class="tw" style="bottom:90px;left:52px">✦</span>
+
+    <p class="garland" aria-hidden="true">🥷 🦄 💖 😊 ✨</p>
+    <p class="when">✨ this summer, on your block ✨</p>
+    <h1>#BlockPartyKit</h1>
+    <p class="byo">Bring your laptop instead of a dish to pass.</p>
+
+    <hr class="rule">
+
+    <h2>How the party works</h2>
+    <div class="hju">
+      <div class="hj">
+        <h3>Host</h3>
+        <p>One machine runs one command. It creates a private mesh and prints an invite code. Write it on the whiteboard next to the snack list.</p>
+        <code>./scripts/host.sh</code>
+      </div>
+      <div class="hj">
+        <h3>Join</h3>
+        <p>Everyone runs one command. Each laptop adds its memory and compute to the cluster. Watch the machines find each other. Cheer.</p>
+        <code>./scripts/join.sh &lt;CODE&gt;</code>
+      </div>
+      <div class="hj">
+        <h3>Use</h3>
+        <p>Start goose. Now the whole room talks to the same local AI, and the room itself is the brain. Let the youngest kiddo ask the first question.</p>
+        <code>./scripts/librarian.sh</code>
+      </div>
+    </div>
+
+    <h2>Built on</h2>
+    <div class="built">
+      <div class="bcard">
+        <h3><a href="https://github.com/Mesh-LLM/mesh-llm">Mesh LLM</a></h3>
+        <p>Pools GPUs and memory across laptops into one local inference API. Can find its peers over plain local Wi-Fi, so it keeps working when the internet doesn't.</p>
+      </div>
+      <div class="bcard">
+        <h3><a href="https://github.com/block/goose">goose</a></h3>
+        <p>The open-source agent originally developed at Block, now part of the Linux Foundation ecosystem, with Spiral's new <a href="https://spiral.xyz/goose/">GDK</a> for building on top.</p>
+      </div>
+    </div>
+    <p class="built-note">The kit is a thin layer over existing open software. The experiment isn't the technology.
+      <span class="kick">It's getting a room full of people to run it together.</span>
+    </p>
+
+    <div class="cta">
+      <a class="btn main" href="https://github.com/YOUR-USERNAME/blockparty-kit">Get the kit on GitHub →</a>
+      <a class="btn alt" href="https://github.com/YOUR-USERNAME/blockparty-kit/blob/main/FIRST_PARTY.md">Throw the first party</a>
+    </div>
+
+    <p class="fine">An unofficial community project. Not affiliated with Block, Spiral, or the Agentic AI Foundation. Built on their open work, with a h/t. Apache-2.0.</p>
+  </div>
+</main>
+</body>
+</html>
