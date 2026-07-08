@@ -1,4 +1,6 @@
-# BlockPartyKit
+## 🥷 🦄 💖 😊 ✨
+
+# #BlockPartyKit
 
 **Turn a room full of ordinary laptops into a shared AI that your community runs.**
 
