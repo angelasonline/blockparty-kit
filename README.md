@@ -1,9 +1,9 @@
-# 🎈 The Block Party Kit
+# The Block Party Kit
 
 **Turn a room full of ordinary laptops into a shared AI that your community runs.**
 
 We call the first gathering a **block party**, because that's what it is:
-you bring a laptop instead of a a dish to pash.
+you bring your laptop instead of a dish to pass.
 
 ---
 
@@ -20,18 +20,19 @@ The pieces to make that real shipped in the open:
 - [**Mesh LLM**](https://github.com/Mesh-LLM/mesh-llm) pools GPUs and memory
   across machines and exposes the result as one OpenAI-compatible API. Models
   too large for any single box get split into layer stages across peers.
-- [**goose**](https://github.com/block/goose) the open-source agent
-  started at Block, now governed by the Agentic AI Foundation at the Linux
-  Foundation sits on top as the thing you actually *talk to*, and Mesh
-  ships a one-command launcher for it.
+- [**goose**](https://github.com/block/goose), the open-source agent started
+  at Block, now governed by the Agentic AI Foundation at the Linux Foundation.
+  It sits on top as the thing you actually *talk to*, and Mesh ships a
+  one-command launcher for it.
 - Spiral's new [**Goose Development Kit (GDK)**](https://spiral.xyz/goose/)
-  means anyone can embed that agent into their own apps kiosks, tools,
+  means anyone can embed that agent into their own apps: kiosks, tools,
   whatever your community needs next.
 
 This kit is the missing social layer: the instructions, scripts, and
 invitation to actually do it **together**.
 
-It's a #blockparty for computers: everyone brings what they have, and together the table holds something nobody could have made alone.
+It's a #blockparty for computers: everyone brings what they have, and
+together the table holds something nobody could have made alone.
 
 ---
 
@@ -41,8 +42,6 @@ It's a #blockparty for computers: everyone brings what they have, and together t
   macOS or Linux, ideally with 8GB+ RAM each. GPUs help but aren't required.
 - **One evening.**
 - **Tasty eats.** Non-negotiable. It's a party, b.
-
----
 
 ## The party, step by step
 
@@ -57,7 +56,7 @@ mesh-llm serve --model Qwen3-8B-Q4_K_M --mesh-name "block-party"
 
 This installs Mesh (checksum-verified release binaries), downloads the model,
 starts a **private** mesh, and prints an **invite token**. Write the token on
-a whiteboard. That token *is* the key to your village only machines that
+a whiteboard. That token *is* the key to your village. Only machines that
 have it can join.
 
 (Or run `./scripts/host.sh`, which does the above with guardrails and
@@ -87,8 +86,8 @@ curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.
 mesh-llm goose
 ```
 
-`mesh-llm goose` launches goose with the mesh as its inference provider 
-the agent's "brain" is now the room itself. 
+`mesh-llm goose` launches goose with the mesh as its inference provider.
+The agent's "brain" is now the room itself.
 
 ```bash
 goose run --recipe recipes/village-librarian.yaml
@@ -134,15 +133,15 @@ the install script runs clean with checksums verified; the `mesh-llm` CLI,
 its Linux Foundation home. Every command above is taken verbatim from, or
 tested against, the upstream projects.
 
-**Not yet verified by us:** a full multi-machine party. On purpose because it
-*can't* be done by one person, and that's the point of the project. Which
+**Not yet verified by us:** a full multi-machine party. On purpose, because
+it can't be done by one person, and that's the point of the project. Which
 brings us to:
 
 ## 🎈 Host the first block party
 
-Nobody has done this yet as a *community* act. Be first. Grab 2+ friends
+Nobody has done this yet as a community act. Be first. Grab 2+ friends
 and their laptops, follow the steps, and open an issue titled
-**"Party report: <your town>"** with what worked, what broke, and (if you
+`Party report: <your town>` with what worked, what broke, and (if you
 want) a photo of the room. `FIRST_PARTY.md` has a checklist.
 
 We'll keep a map. First pin wins bragging rights for eternity.
@@ -152,8 +151,8 @@ We'll keep a map. First pin wins bragging rights for eternity.
 `mesh-llm doctor` diagnoses most local issues. For multi-interface Linux
 machines and Docker hosts, see the upstream
 [MESHES.md](https://github.com/Mesh-LLM/mesh-llm/blob/main/docs/MESHES.md)
-notes on `--bind-ip`. Mesh LLM is experimental distributed-systems software —
-expect rough edges, report them upstream kindly.
+notes on `--bind-ip`. Mesh LLM is experimental distributed-systems software,
+so expect rough edges, and report them upstream kindly.
 
 ## Credits & independence
 
@@ -161,7 +160,7 @@ This is an **unofficial community kit**. It stands on:
 [Mesh LLM](https://github.com/Mesh-LLM/mesh-llm) (Apache-2.0),
 [goose](https://github.com/block/goose) (Apache-2.0, Agentic AI Foundation /
 Linux Foundation), and the [GDK](https://spiral.xyz/goose/) work from Spiral.
-We're not affiliated with Block, Spiral, or the AAIF — we just think they
+We're not affiliated with Block, Spiral, or the AAIF. We just think they
 built the parts of something bigger than any of them has said out loud.
 
 License: Apache-2.0. Fork it, translate it, throw a better party than ours.
