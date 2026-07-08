@@ -95,7 +95,7 @@ goose run --recipe recipes/village-librarian.yaml
 Now anyone at the party can ask it anything, and the thinking happens on
 your neighbors' machines, not in anyone's datacenter.
 
-### 4. Go bigger than any one box (optional)
+### 4. Go bigger than any one box 
 
 Once you trust the setup, try a model none of your machines could run alone:
 
@@ -107,7 +107,7 @@ mesh-llm serve --model hf://meshllm/<repo>@<rev> --split
 This is the party trick: *collectively* you're running something *individually
 impossible*. That sentence is the whole project.
 
-### 5. The internet goes out? The party doesn't. (optional)
+### 5. The internet goes out? The party doesn't. 
 
 Mesh discovery normally uses Nostr relays, but it also supports pure
 local-network discovery:
@@ -122,7 +122,7 @@ disaster-prone areas: this section is for you.
 
 ---
 
-## What's verified and what isn't (honesty section)
+## What's verified and what isn't 
 
 **Verified by me, 2026-07-07, on Linux x86_64, mesh-llm v0.72.2:**
 the install script runs clean with checksums verified; the `mesh-llm` CLI,
