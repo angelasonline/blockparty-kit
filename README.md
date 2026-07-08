@@ -2,9 +2,6 @@
 
 **Turn a room full of ordinary laptops into a shared AI that your community runs.**
 
-We call the first gathering a **block party**, because that's what it is:
-you bring your laptop instead of a dish to pass.
-
 ---
 
 ## Why this exists
