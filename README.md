@@ -87,9 +87,8 @@ curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.
 mesh-llm goose
 ```
 
-`mesh-llm goose` launches goose with the mesh as its inference provider —
-the agent's "brain" is now the room itself. Load our recipe to give it a
-job description:
+`mesh-llm goose` launches goose with the mesh as its inference provider 
+the agent's "brain" is now the room itself. 
 
 ```bash
 goose run --recipe recipes/village-librarian.yaml
