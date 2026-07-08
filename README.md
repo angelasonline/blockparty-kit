@@ -124,7 +124,7 @@ disaster-prone areas: this section is for you.
 
 ## What's verified and what isn't (honesty section)
 
-**Verified by us, 2026-07-07, on Linux x86_64, mesh-llm v0.72.2:**
+**Verified by me, 2026-07-07, on Linux x86_64, mesh-llm v0.72.2:**
 the install script runs clean with checksums verified; the `mesh-llm` CLI,
 `goose`, `claude`, `discover`, and `doctor` subcommands exist as documented;
 `--join`, `--publish`, `--split`, `--mesh-name`, and
@@ -132,9 +132,9 @@ the install script runs clean with checksums verified; the `mesh-llm` CLI,
 its Linux Foundation home. Every command above is taken verbatim from, or
 tested against, the upstream projects.
 
-**Not yet verified by us:** a full multi-machine party. On purpose, because
+**Not yet verified by me:** a full multi-machine party. On purpose, because
 it can't be done by one person, and that's the point of the project. Which
-brings us to:
+brings me to:
 
 ## 🪩 Host the first #blockparty
 
@@ -143,7 +143,7 @@ and their laptops, follow the steps, and open an issue titled
 `Party report: <your town>` with what worked, what broke, and (if you
 want) a photo of the room. `FIRST_PARTY.md` has a checklist.
 
-We'll keep a map. First pin wins bragging rights for eternity.
+I'll keep a map. First pin wins bragging rights for eternity.
 
 ## Troubleshooting
 
@@ -159,9 +159,9 @@ This is an **unofficial community kit**. It stands on:
 [Mesh LLM](https://github.com/Mesh-LLM/mesh-llm) (Apache-2.0),
 [goose](https://github.com/block/goose) (Apache-2.0, Agentic AI Foundation /
 Linux Foundation), and the [GDK](https://spiral.xyz/goose/) work from Spiral.
-We're not affiliated with Block, Spiral, or the AAIF. We just think they're
+We're not affiliated with Block, Spiral, or the AAIF. I just think they're
 21 neat nerds plus one intern who's been missing since they asked him to investigate 
 the secret in the well.
 
-License: Apache-2.0. Fork it, translate it, throw a better party than ours.
+License: Apache-2.0. Fork it, translate it, throw a better party than mine.
 Be safe out there.
