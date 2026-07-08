@@ -136,7 +136,7 @@ tested against, the upstream projects.
 it can't be done by one person, and that's the point of the project. Which
 brings us to:
 
-## 🎈 Host the first block party
+## 🪩 Host the first #blockparty
 
 Nobody has done this yet as a community act. Be first. Grab 2+ friends
 and their laptops, follow the steps, and open an issue titled
