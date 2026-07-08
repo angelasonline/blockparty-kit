@@ -3,14 +3,14 @@
 Nobody has done this yet as a community act. This checklist gets you there
 in one evening.
 
-## Before (the host, ~1 hour, alone or with a pal, you choose b)
+## Before (the host, ~1 hour, alone or with a pal)
 
 - [ ] Pick the host machine (most RAM/GPU in the room) and run
       `scripts/host.sh` once **in advance** the first model download is
       several GB and guests shouldn't watch a progress bar.
 - [ ] Confirm the console loads at `http://localhost:3131`.
 - [ ] Run `mesh-llm doctor` and clear anything its fussy about.
-- [ ] Whiteboard + marker for the invite token. Good eats.
+- [ ] Whiteboard + marker for the invite token + some good eats.
 
 ## During (everyone, ~1 hour)
 
