@@ -3,7 +3,7 @@
 Nobody has done this yet as a community act. This checklist gets you there
 in one evening.
 
-## Before (the host, ~1 hour, alone)
+## Before (the host, ~1 hour, alone or with a pal, you choose b)
 
 - [ ] Pick the host machine (most RAM/GPU in the room) and run
       `scripts/host.sh` once **in advance** the first model download is
