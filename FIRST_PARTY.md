@@ -1,4 +1,4 @@
-#  🪩 FIRST_PARTY.md hold the first block party
+#  🪩 FIRST_PARTY.md hold the first #blockparty
 
 Nobody has done this yet as a community act. This checklist gets you there
 in one evening.
